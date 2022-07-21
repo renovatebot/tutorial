@@ -8,18 +8,18 @@ Welcome to the Renovate hands-on tutorial.
 This tutorial is based on the Renovate GitHub App. you can also run Renovate as a CLI tool or a self-hosted application.
 
 > **Note**
-> Although this tutorial is based in the GitHub App, the concepts discussed apply to all environments.
+> Although this tutorial is based on the GitHub App, the concepts discussed apply to all environments.
 
 In this tutorial, you will learn how to configure Renovate and become familiar with some of the basic features.
 
-What you will learn: 
-1) Installation
-2) Onboarding
-3) Getting to know Renovate’s update PRs
-4) Dependency Dashboard 
+What you will learn:
 
+- 1 Installation
+- 1 Onboarding
+- 1 Getting to know Renovate’s update PRs
+- 1 Dependency Dashboard 
 
-We will begin this tutorial with configuring and installing the Renovate App and an overview of the default settings and basic functionalities. 
+We will begin this tutorial with configuring and installing the Renovate app and an overview of the default settings and basic functionalities. 
 
 Later, we will dive deeper into functional use-cases, advanced features, and `best practices` so you'll know how to leverage Renovate to its fullest.
 
@@ -27,15 +27,15 @@ Later, we will dive deeper into functional use-cases, advanced features, and `be
 
 Let’s start by forking the tutorial repo to your account, installing the Renovate GitHub App, and configuring it to your repo.
  
-1) Make sure you are logged in to GitHub.com
-2) Fork this [RenovateTutorial](https://github.com/PhilipAbed/RenovateTutorial) repository. The tutorial instructions will be based on the contents of this repository
-3) The following instructions are directed at those that don’t have Renovate installed:
+- 1 Make sure you are logged in to GitHub.com
+- 1 Fork this [RenovateTutorial](https://github.com/PhilipAbed/RenovateTutorial) repository. The tutorial instructions will be based on the contents of this repository
+- 1 The following instructions are directed at those that don’t have Renovate installed:
    - Install the Renovate App to your account by navigating to the [Renovate App GitHub installation page](https://github.com/apps/renovate) and select Install:
    ![image](https://user-images.githubusercontent.com/102745725/178965463-525a385e-d914-4309-aeb4-cb4358dc12bc.png)
-4) If you do have Renovate installed:
+-1 If you do have Renovate installed:
    - navigate to the [Renovate app page](https://github.com/apps/renovate) and select configure:
    ![image](https://user-images.githubusercontent.com/42116482/178491021-a0b7ba34-3bc7-4953-8452-416fbd3d6ec9.png)
-5) You will reach an installation configuration page where you are asked to configure Repository Access. 
+- 1 You will reach an installation configuration page where you are asked to configure Repository Access. 
 
 > **Note**
 > for existing users, installation configuration appears at the bottom of the page.
@@ -62,7 +62,6 @@ For new installs:
 
 **Congratulations! You have successfully installed Renovate to your account.** 🎈
 
-
 ## Part 2 - Onboarding
 
 Now that you have Renovate installed, we can begin onboarding.
@@ -77,12 +76,11 @@ Let’s review the concepts of the Onboarding PR and learn about Renovate’s in
 - The Onboarding PR creates a configuration file called `renovate.json`, which contains Renovate’s default settings and can be modified during onboarding.
 
 Now let’s review the onboarding PR - 
-1) Navigate to the `Pull Requests` section in GitHub, and open the newly generated PR - `Configure Renovate`
+- 1 Navigate to the `Pull Requests` section in GitHub, and open the newly generated PR - `Configure Renovate`
 
 <img width="1500" alt="onboarding PR" src="https://user-images.githubusercontent.com/102745725/178965966-76aa3941-cac4-4df3-bd89-75b9f8002924.png">
 
 <img width="935" alt="onboarding content" src="https://user-images.githubusercontent.com/102745725/178966039-b11315b8-8c75-416b-9f18-c8109c17d0ab.png">
-
 
 #### The onboarding PR contains:
 
@@ -95,7 +93,6 @@ Now let’s review the onboarding PR -
 > **Note**
 > Renovate will not create dependency update PRs until the onboarding PR will be merged.
 
-
 #### These are some of the default configurations of Renovate:
 
    - Enables creation of the “Dependency Dashboard” - a dashboard that shows an overview of the state of your repositories' dependencies.
@@ -103,39 +100,42 @@ Now let’s review the onboarding PR -
    - The limit of simultaneous open Renovate PRs is set to 10.
    - Renovate automatically groups known monorepo packages to a single PR (example can be seen in the `date-io` PR under the **what to expect** section).
 
-Renovate offers the ability to change configurations before merging the onboarding PR as well as preview the results of these changes. At this point, Renovate has created a branch called renovate/configure which contains the `renovate.json` configuration file. By default, Renovate limits branch creation to 2 per hour:
+Renovate offers the ability to change configurations before merging the onboarding PR as well as preview the results of these changes.
+At this point, Renovate has created a branch called renovate/configure which contains the `renovate.json` configuration file.
+By default, Renovate limits branch creation to 2 per hour:
 
 <img width="829" alt="onboarding warning hourly" src="https://user-images.githubusercontent.com/102745725/178961193-2f1f1548-5282-4d33-b8ef-6e141f0a643d.png">
 
 Example
 
-As a user, despite Renovate’s suggestion to limit hourly PR creation to 2, we might want to increase the limit to a different number. Let’s try changing this hourly limitation to 3:
+As a user, despite Renovate’s suggestion to limit hourly PR creation to 2, we might want to increase the limit to a different number.
+Let’s try changing this hourly limitation to 3:
 
-1) Go to the newly created branch - `renovate/configure`:
+- 1 Go to the newly created branch - `renovate/configure`:
 
 <img width="763" alt="new branch" src="https://user-images.githubusercontent.com/102745725/178966974-35c089c6-4190-4721-b1c2-956d84e80d07.png">
 
-2) Go into the `renovate.json` file:
+- 1 Go into the `renovate.json` file:
 
 ![image](https://user-images.githubusercontent.com/42116482/178494908-89189f2e-632a-42ee-a49a-16941a40101b.png)
 
-3) Add the following code segment:
-```
+- 1 Add the following code segment:
+```json
 {
   "prHourlyLimit": 3
 }
 ```
 <img width="591" alt="change in config 1" src="https://user-images.githubusercontent.com/102745725/178967120-51ec5940-42bc-444e-8c4d-b98ea4ee5948.png">
 
-4) Commit the changes
-5) Revisit the onboarding PR and notice how the onboarding PR automatically updates to reflect the changes you made to the configuration 
+- 1 Commit the changes
+- 1 Revisit the onboarding PR and notice how the onboarding PR automatically updates to reflect the changes you made to the configuration 
 
 <img width="830" alt="onboarding warning hourly update" src="https://user-images.githubusercontent.com/102745725/178960884-40077a5c-8fe1-422f-81c1-567ea1e6619b.png">
 
 > **Note**
 > May take a few moments to update.
 
-6) Merge the onboarding pull request.
+- 1 Merge the onboarding pull request.
 
 **Congratulations! You have successfully onboarded Renovate.** 🎈
 
@@ -152,7 +152,7 @@ Here we will review the basic concepts of Renovate update PRs and merge it.
 - You should already see notifications for these pull requests in the `Pull Requests` section of the repo.
 
 Let’s go ahead and take a look at a Renovate update PR:
-1) Navigate to the `Pull requests` section and open - `Update dependency lodash to x.y.z`
+- 1 Navigate to the `Pull requests` section and open - `Update dependency lodash to x.y.z`
 
 <img width="1256" alt="open PRs" src="https://user-images.githubusercontent.com/102745725/178967929-690b3866-190b-4576-a961-981ce78cbd1b.png">
 
@@ -170,7 +170,7 @@ Let’s go ahead and take a look at a Renovate update PR:
 
 <img width="1488" alt="file diff lodash" src="https://user-images.githubusercontent.com/102745725/178968020-865560f7-173c-4e9e-a073-488147dbb137.png">
 
-2) Merge this pull request
+- 1 Merge this pull request
 
 >Note - Renovate is highly configurable and supports:
 >
@@ -186,12 +186,15 @@ Let’s go ahead and take a look at a Renovate update PR:
 
 ## Part 4 - Dependency Dashboard
 
-Renovate’s Dependency Dashboard is a GitHub Issue that enables you to manage and monitor Renovate’s activity in your repo. In this section, we will go over some of its main functionalities and capabilities.
+Renovate’s Dependency Dashboard is a GitHub Issue that enables you to manage and monitor Renovate’s activity in your repo.
+In this section, we will go over some of its main functionalities and capabilities.
 
-Let’s begin by creating and enabling the Dependency Dashboard. Since GitHub defaults to disable `issues` on forked repositories, we need to enable it on the forked RenovateTutorial repo:
+Let’s begin by creating and enabling the Dependency Dashboard.
+Since GitHub defaults to disable `issues` on forked repositories, we need to enable it on the forked RenovateTutorial repo:
 
-1) Navigate to the main page of the repo and go to `settings` -> `general`
-2) Check the `issues` checkbox under the Features section:
+- 1 Go to the main page of the repo
+- 1 Go to `settings` -> `general`
+- 1 Check the `issues` checkbox under the Features section:
 
 <img width="1284" alt="issues settings" src="https://user-images.githubusercontent.com/102745725/178968523-fb002cf1-2510-4b4f-b840-f9776e660d92.png">
 
@@ -201,12 +204,12 @@ Let’s begin by creating and enabling the Dependency Dashboard. Since GitHub de
 > This is usually done in a click via the Dependency Dashboard.
 
 
-3) Go to the `Pull requests` section
-4) Select `Update dependency php to v8.1` and select `Close pull request`
+- 1 Go to the `Pull requests` section
+- 1 Select `Update dependency php to v8.1` and select `Close pull request`
 
 <img width="927" alt="close php" src="https://user-images.githubusercontent.com/102745725/178969009-7239db99-4abe-44d1-a86c-a0effdf6fb7a.png">
 
-5) This will trigger Renovate to run and the Dependency Dashboard will appear under the `Issues` section - navigate to it
+- 1 This will trigger Renovate to run and the Dependency Dashboard will appear under the `Issues` section - navigate to it
 
 > **Note**
 > it may take a minute to appear.
@@ -235,7 +238,8 @@ You can also re-run the Renovate bot manually directly from the Dependency Dashb
 
 Let’s dive into one of the dependency dashboard capabilities - **the Pending Approval feature**. 
 
-Say we want to take extra measures before updating major versions of a package (either to reduce noise or to handle it more carefully). Renovate offers an option to prevent automatic creation of major version update PRs and create such PRs only upon manual request from the Dependency Dashboard. 
+Say we want to take extra measures before updating major versions of a package (either to reduce noise or to handle it more carefully).
+Renovate offers an option to prevent automatic creation of major version update PRs and create such PRs only upon manual request from the Dependency Dashboard. 
 
 In the Dependency Dasboard, under the `Rate Limited` section, the `Update dependency commander to vX` is waiting to be created.
 
@@ -244,12 +248,12 @@ In the Dependency Dasboard, under the `Rate Limited` section, the `Update depend
 
 <img width="928" alt="commander in Rate Limited" src="https://user-images.githubusercontent.com/102745725/178960104-c254c12f-08fb-4508-824d-20df60b2290f.png">
 
-Since we decided that we want to handle it manually, we will edit configurations and see how the depndency dashboard is affected by this change. 
+Since we decided that we want to handle it manually, we will edit configurations and see how the dependency dashboard is affected by this change. 
 
 In order to limit all major updates to on-demand creation:
 
-1) Add this code segment to your `renovate.json` file:
-```
+- 1 Add this code segment to your `renovate.json` file:
+```json
 "packageRules": [
     {
       "matchUpdateTypes": ["major"],
@@ -260,23 +264,23 @@ In order to limit all major updates to on-demand creation:
 
 <img width="924" alt="change in config - pending approval" src="https://user-images.githubusercontent.com/102745725/178962677-612e8172-fac7-45fb-937b-46a559d848f0.png">
 
-2) Commit the changes
+- 1 Commit the changes
 
 > **Note**
 > Changing the `renovate.json` configuraion file is a webhook that triggers Renovate to re-run.
 
-3) Now go back to the Dependency Dashboard in the Issues section
+- 1 Now go back to the Dependency Dashboard in the Issues section
 
-4) As you can see, `commander` major update PR now appears under the **Pending Approval** section and **will not** be opened unless manually triggered
+- 1 As you can see, `commander` major update PR now appears under the **Pending Approval** section and **will not** be opened unless manually triggered
 
      > **Note**
      > it make take a minute to complete Renovate's run 
 
 <img width="926" alt="commander in pending approval" src="https://user-images.githubusercontent.com/102745725/178962735-84f1ae00-df4c-4fed-adf5-12fefeb94e9f.png">
 
-5) You can now decide to manually open this PR by checking the box next to it
+- 1 You can now decide to manually open this PR by checking the box next to it
 
-6) Navigate to the `Pull requests` section to review the generated PR and merge it to the repo.
+- 1 Navigate to the `Pull requests` section to review the generated PR and merge it to the repo.
 
 
 **Congratulations! You are now familiar with Renovate’s Dependency Dashboard.** 🎈
@@ -299,16 +303,17 @@ In order to limit all major updates to on-demand creation:
 
 We have more advanced Renovate tutorials in the pipeline and will post updates when they are published.
 
-What’s coming next?
-  - Merge confidence
-  - Auto Merge
-  - Labeling
-  - Grouping
-  - Schedule
-  - Package Rules
-  - GitHub actions
-  - Assignees and reviewers
-  - Regex Managers
+What’s coming next:
+
+- Merge confidence
+- Auto Merge
+- Labeling
+- Grouping
+- Schedule
+- Package Rules
+- GitHub actions
+- PR Assignees and PR reviewers
+- Regex Managers
 
 
 
