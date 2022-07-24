@@ -1,0 +1,3 @@
+FROM php:8.0-fpm
+
+ENV DOCKERIZE_VERSION 0.6.1
