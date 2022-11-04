@@ -1,6 +1,6 @@
 # Renovate - Hands On Tutorial
 
-## Introduction
+## Introduction - 1
 
 Welcome to the Renovate hands-on tutorial.
 
