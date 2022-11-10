@@ -28,7 +28,7 @@ Later, we will dive deeper into functional use-cases, advanced features, and `be
 Let’s start by forking the tutorial repo to your account, installing the Renovate GitHub App, and configuring it to your repo.
  
 1. Make sure you are logged in to GitHub.com
-1. Fork this repository. The tutorial instructions will be based on the contents of it.
+1. Fork this repository. The tutorial instructions will be based on its contents.
 1. The following instructions are directed at those that don’t have Renovate installed:
    - Install the Renovate App to your account by navigating to the [Renovate App GitHub installation page](https://github.com/apps/renovate) and select Install:
    ![image](https://user-images.githubusercontent.com/102745725/178965463-525a385e-d914-4309-aeb4-cb4358dc12bc.png)
