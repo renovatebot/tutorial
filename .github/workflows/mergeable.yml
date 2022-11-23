@@ -1,0 +1,13 @@
+version: 2
+mergeable:
+
+## Last Comment - Atlantis Destroy Operations
+  - when: issue_comment.*
+    name: Check if Atlantis Plan has Destroy
+    validate:
+    - do: lastComment
+      must_include:
+        regex: '^merge$'
+    pass:
+      - do: labels
+        add: 'Ready for Review'
