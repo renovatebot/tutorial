@@ -2,7 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
+    "automerge": true,
+  "automergeType": "pr-comment",
+  "automergeComment": "bors: r+"
+    "prHourlyLimit": 1000
   ]
-  "automerge": true
-  "prHourlyLimit": 1000
+  
 }
