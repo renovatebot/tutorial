@@ -1,0 +1,35 @@
+
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>renovatebot/.github"],
+  "assignees": ["securemoyinoko"],
+  "semanticCommitScope": "deps",
+  "automergeType": "pr",
+  "renovateFork" : true,
+  "prCreation": "immediate",
+  "dockerfile": {
+    "semanticCommitType": "build"
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": ["containerbase/node"],
+      "versioning": "node"
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "semanticCommitType": "build"
+    },
+    {
+      "matchPackageNames": ["semantic-release"],
+      "semanticCommitType": "build"
+    },
+    {
+      "matchPackageNames": ["@types/jest"],
+      "groupName": "jest monorepo"
+    },
+    {
+      "matchPaths": ["**/__fixtures__/**"],
+      "enabled": false
+    }
+  ]
+}
