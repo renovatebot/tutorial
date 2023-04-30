@@ -13,7 +13,8 @@
         "major"
       ],
       "automerge": true,
-      "automergeType": "branch"
+      "automergeType": "branch",
+      "requiredStatusChecks": null
     }
   ],
   "platformAutomerge": true
