@@ -58,7 +58,7 @@ For new installs:
 
 - After a few seconds, you will be automatically redirected to the Mend's developer portal where you can sign in and view the Renovate logs. We recommend saving this [link](https://developer.mend.io) for future use.
 
-<img width="625" alt="Screen Shot 2022-07-14 at 14 24 26" src="https://github.com/Gabriel-Ladzaretti/tutorial/assets/97394622/0a615573-6482-44e4-a79b-07d4356ee574">
+<img width="600" alt="sign in page" src="https://github.com/Gabriel-Ladzaretti/tutorial/assets/97394622/0a615573-6482-44e4-a79b-07d4356ee574">
 
 **Congratulations! You have successfully installed Renovate to your account.** 🎈
 
