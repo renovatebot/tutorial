@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "prHourlyLimit": 3,
+  "packageRules": [
+    {
+      "matchPackageNames": ["lodash"],
+      "allowedVersions": "<=4.17.20"
+    },
+    {
+      "matchPackageNames": ["commander"],
+      "allowedVersions": "<=5.0.0"
+    }
+  ]
+}
