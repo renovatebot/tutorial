@@ -12,6 +12,14 @@
     {
       "matchPackageNames": ["commander"],
       "allowedVersions": "<=5.0.0"
+    },
+    {
+      "matchPackageNames": ["@date-io/date-fns"],
+      "allowedVersions": "<=2.15.0"
+    },
+    {
+      "matchPackageNames": ["@date-io/moment"],
+      "allowedVersions": "<=2.15.0"
     }
   ]
 }
