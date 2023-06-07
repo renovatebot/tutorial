@@ -18,6 +18,6 @@ jobs:
     
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v35.5.0
+        uses: tj-actions/changed-files@v35.9.3
         with:
           json: false
