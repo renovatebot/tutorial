@@ -4,11 +4,11 @@
 
 Welcome to the Renovate hands-on tutorial.
 
-This tutorial is based on the Renovate GitHub App.
+This tutorial is based on the Mend Renovate App.
 You can also run Renovate as a CLI tool or a self-hosted application.
 
 > **Note**
-> Although this tutorial is based on the GitHub App, the concepts discussed apply to all environments.
+> Although this tutorial is based on the Mend Renovate App, the concepts discussed apply to all environments.
 
 In this tutorial, you will learn how to configure Renovate and become familiar with some of the basic features.
 
@@ -19,21 +19,21 @@ What you will learn:
 3. Getting to know Renovate’s update PRs
 4. Dependency Dashboard 
 
-We will begin this tutorial with configuring and installing the Renovate app and an overview of the default settings and basic functionalities. 
+We will begin this tutorial with configuring and installing the Mend Renovate App and an overview of the default settings and basic functionalities. 
 
 Later, we will dive deeper into functional use-cases, advanced features, and `best practices` so you'll know how to leverage Renovate to its fullest.
 
 ## Part 1 - Installation
 
-Let’s start by forking the tutorial repo to your account, installing the Renovate GitHub App, and configuring it to your repo.
+Let’s start by forking the tutorial repo to your account, installing the Mend Renovate App, and configuring it to your repo.
  
 1. Make sure you are logged in to GitHub.com
 1. Fork this repository. The tutorial instructions will be based on its contents.
-1. The following instructions are directed at those that don’t have Renovate installed:
-   - Install the Renovate App to your account by navigating to the [Renovate App GitHub installation page](https://github.com/apps/renovate) and select Install:
+1. The following instructions are directed at those that don’t have the Mend Renovate App installed:
+   - Install the Mend Renovate App to your account by navigating to the [the Mend Renovate App installation page](https://github.com/apps/renovate) and select Install:
    ![image](https://user-images.githubusercontent.com/102745725/178965463-525a385e-d914-4309-aeb4-cb4358dc12bc.png)
-1. If you do have Renovate installed:
-   - navigate to the [Renovate app page](https://github.com/apps/renovate) and select configure:
+1. If you do have the Mend Renovate App installed:
+   - navigate to [the Mend Renovate App](https://github.com/apps/renovate) and select configure:
    ![image](https://user-images.githubusercontent.com/42116482/178491021-a0b7ba34-3bc7-4953-8452-416fbd3d6ec9.png)
 1. You will reach an installation configuration page where you are asked to configure Repository Access. 
 
@@ -64,7 +64,7 @@ For new installs:
 
 ## Part 2 - Onboarding
 
-Now you have installed Renovate, we can begin onboarding.
+Now you have installed the Mend Renovate App, we can begin onboarding.
 
 Let’s review the concepts of the Onboarding PR and learn about Renovate’s initial settings.
 
@@ -174,13 +174,14 @@ Let’s go ahead and take a look at a Renovate update PR:
 
 1. Merge this pull request
 
->Note - Renovate is highly configurable and supports:
+> **Note**
+> Renovate is highly configurable and supports:
 >
->- On-demand PR creation.
->- Automatic merging of PRs.
->- Settings for specific dependencies/package managers.
->- Scheduling.
->- Grouping. 
+> - On-demand PR creation.
+> - Automatic merging of PRs.
+> - Settings for specific dependencies/package managers.
+> - Scheduling.
+> - Grouping. 
 >
 >  All the above and more will be discussed in future parts of the tutorial.
 
@@ -231,14 +232,14 @@ Since GitHub defaults to disable `issues` on forked repositories, we need to ena
 
 Users can manually trigger the creation of dependency updates directly from the dashboard. 
 
-You can also re-run the Renovate bot manually directly from the Dependency Dashboard by enabling the “Check this box to trigger a request Renovate to run again on this repository” option:
+You can also re-run Renovate manually from the Dependency Dashboard by enabling the “Check this box to trigger a request Renovate to run again on this repository” option:
 
  <img width="867" alt="rerun renovate" src="https://user-images.githubusercontent.com/102745725/178969114-c1b64333-b45a-4508-b638-1e25ad0adab5.png">
  
 Let’s dive into one of the Dependency Dashboard capabilities - **the Pending Approval feature**. 
 
 Say we want to take extra measures before updating major versions of a package (either to reduce noise or to handle it more carefully).
-Renovate offers an option to prevent automatic creation of major version update PRs and create such PRs only upon manual request from the Dependency Dashboard. 
+Renovate offers an option to prevent automatic creation of major version update PRs and create such PRs only upon manual request from the Dependency Dashboard.
 
 In the Dependency Dashboard, under the `Rate Limited` section, the `Update dependency commander to vX` is waiting to be created.
 
@@ -290,7 +291,7 @@ In order to limit all `major` updates to on-demand creation:
   
 ### General Comments:
 
-- Granting access to all repositories or change repo selections can be modified at any time on the [Renovate App GitHub page](https://github.com/apps/renovate).
+- Granting access to all repositories or change repo selections can be modified at any time on the [the Mend Renovate App GitHub page](https://github.com/apps/renovate).
 - Renovate configuration can be modified by manual configurations, global organization configurations and existing Renovate presets.
 
 ### Congratulations!
