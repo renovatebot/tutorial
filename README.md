@@ -273,7 +273,7 @@ In order to limit all `major` updates to on-demand creation:
 4. As you can see, `commander` major update PR now appears under the **Pending Approval** section and **will not** be opened unless manually triggered
 
      > **Note**
-     > it make take a minute to complete Renovate's run 
+     > it may take a minute to complete Renovate's run 
 
 <img width="926" alt="commander in pending approval" src="https://user-images.githubusercontent.com/102745725/178962735-84f1ae00-df4c-4fed-adf5-12fefeb94e9f.png">
 
