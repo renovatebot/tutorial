@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest\\.yml$"],
+      "matchStrings": ["go: (?<currentValue>.*?)"],
+      "depNameTemplate": "go",
+      "datasourceTemplate": "golang-version"
+    }
+  ]
+}
