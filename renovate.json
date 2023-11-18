@@ -5,7 +5,7 @@
     {
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
-      "matchStrings": ["go: (?<currentValue>.+?)"],
+      "matchStrings": ["go: (?<currentValue>.+)"],
       "depNameTemplate": "go",
       "datasourceTemplate": "golang-version"
     }
