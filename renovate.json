@@ -16,6 +16,21 @@
       "depNameTemplate": "node",
       "datasourceTemplate": "node",
       "versioningTemplate": "node"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["nodeCurrent: (?<currentValue>21.+)"],
+      "depNameTemplate": "node",
+      "datasourceTemplate": "node",
+      "versioningTemplate": "node"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["gcloud: (?<currentValue>.+)"],
+      "depNameTemplate": "twistedpair/google-cloud-sdk",
+      "datasourceTemplate": "github-tags"
     }
   ],
   "packageRules": [
