@@ -22,7 +22,7 @@
       "defaultRegistryUrlTemplate": "https://nodejs.org/dist/index.json",
       "format": "json",
       "transformTemplates": [
-        "{ \"versions\": $map($filter($, function($v) { return /^20/.test($v.version) })}"
+        "{ \"releases\": $map($filter($, function($v) { \"version\" : /^20/.test($v.version) })}"
       ]
     }
   }
