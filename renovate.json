@@ -57,8 +57,9 @@
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
       "matchStrings": ["maven: (?<currentValue>.+)"],
-      "depNameTemplate": "apache/maven",
-      "datasourceTemplate": "github-tags"
+      "depNameTemplate": "maven",
+      "datasourceTemplate": "maven",
+      "versioningTemplate": "maven"
     },
     {
       "customType": "regex",
