@@ -45,6 +45,55 @@
       "matchStrings": ["gradle: (?<currentValue>.+)"],
       "depNameTemplate": "gradle",
       "datasourceTemplate": "gradle-version"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["lein: (?<currentValue>.+)"],
+      "depNameTemplate": "technomancy/leiningen",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["maven: (?<currentValue>.+)"],
+      "depNameTemplate": "maven",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["pyenv: (?<currentValue>.+)"],
+      "depNameTemplate": "pyenv/pyenv",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["python3: (?<currentValue>.+)"],
+      "depNameTemplate": "python/cpython",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["ruby: (?<currentValue>.+)"],
+      "depNameTemplate": "ruby",
+      "datasourceTemplate": "ruby-version"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["sbt: (?<currentValue>.+)"],
+      "depNameTemplate": "sbt/sbt",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["yq: (?<currentValue>.+)"],
+      "depNameTemplate": "mikefarah/yq",
+      "datasourceTemplate": "github-releases"
     }
   ],
   "packageRules": [
