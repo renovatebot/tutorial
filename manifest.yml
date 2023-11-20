@@ -1,1 +1,35 @@
 go: 1.20.1
+nodelts: 20.7.0
+nodeCurrent: 21.0.0
+gcloud: 448.0.0
+git-lfs: 3.1.1
+gradle: 8.3
+lein: 2.10.0
+maven: 3.9.4
+pyenv: 2.3.27
+python2: 2.7.18
+python3: 3.11.5
+ruby: 3.2.2
+sbt: 1.9.6
+yq: 4.35.2
+
+# apt
+docker: 5:24.0.6-1~ubuntu.22.04~jammy
+containerd: 1.6.24-1
+docker-compose: 2.21.0-1~ubuntu.22.04~jammy
+java8: 8
+java17: 17
+
+npm:
+  - coffescript
+  - grunt-cli
+  - grunt
+  - bower
+  - nodeunit
+  - mocha
+  - yarn
+
+pip:
+  - virtualenv
+  - nose
+  - pep8
