@@ -38,6 +38,13 @@
       "matchStrings": ["git-lfs: (?<currentValue>.+)"],
       "depNameTemplate": "git-lfs/git-lfs",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["gradle: (?<currentValue>.+)"],
+      "depNameTemplate": "gradle",
+      "datasourceTemplate": "gradle-version"
     }
   ],
   "packageRules": [
