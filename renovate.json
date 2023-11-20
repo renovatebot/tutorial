@@ -8,6 +8,22 @@
       "matchStrings": ["go: (?<currentValue>.+)"],
       "depNameTemplate": "go",
       "datasourceTemplate": "golang-version"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["nodelts: (?<currentValue>20.+)"],
+      "depNameTemplate": "node",
+      "datasourceTemplate": "custom.node-version-lts"
     }
-  ]
+  ],
+  "customDatasources": {
+    "node-version-lts": {
+      "defaultRegistryUrlTemplate": "https://nodejs.org/dist/index.json",
+      "format": "json",
+      "transformTemplates": [
+        "{ \"version\": $map($filter($, function($v) { return /^20/.test($v.version) })}"
+      ]
+    }
+  }
 }
