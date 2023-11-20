@@ -31,7 +31,16 @@
       "matchStrings": ["gcloud: (?<currentValue>.+)"],
       "depNameTemplate": "twistedpair/google-cloud-sdk",
       "datasourceTemplate": "github-tags"
-    }
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["git-lfs: (?<currentValue>.+)"],
+      "depNameTemplate": "git-lfs/git-lfs",
+      "packageName": "git-lfs",
+      "datasourceTemplate": "github-releases"
+    },
+
   ],
   "packageRules": [
     {
