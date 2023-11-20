@@ -13,17 +13,15 @@
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
       "matchStrings": ["nodelts: (?<currentValue>20.+)"],
-      "depNameTemplate": "nodelts",
-      "datasourceTemplate": "custom.nodelts"
+      "depNameTemplate": "node",
+      "datasourceTemplate": "node",
+      "versioningTemplate": "node"
     }
   ],
-  "customDatasources": {
-    "nodelts": {
-      "defaultRegistryUrlTemplate": "https://nodejs.org/dist/index.json",
-      "format": "json",
-      "transformTemplates": [
-        "{ \"releases\": $map($filter($, function($v) { \"version\" : /^20/.test($v.version) })}"
-      ]
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch"],
+      "matchPackageNames": ["node"]
     }
-  }
+  ]
 }
