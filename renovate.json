@@ -12,18 +12,15 @@
     {
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
-      "matchStrings": ["nodelts: (?<currentValue>20.+)"],
-      "depNameTemplate": "custom.nodelts",
-      "datasourceTemplate": "custom.nodelts"
+      "matchStrings": ["nodelts: (?<currentValue>.*?)"],
+      "depNameTemplate": "node",
+      "datasourceTemplate": "node",
+      "versioningTemplate": "node"
     }
   ],
-  "customDatasources": {
-    "nodelts": {
-      "defaultRegistryUrlTemplate": "https://nodejs.org/dist/index.json",
-      "format": "json",
-      "transformTemplates": [
-        "{ \"releases\": $map($filter($, function($v) { return /^20/.test($v.version) }), function($v) { return { \"version\": $v.version } }) }"
-      ]
+  "packageRules": [
+    {
+      "matchPackageNames": ["node"]
     }
-  }
+  ]
 }
