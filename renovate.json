@@ -14,11 +14,11 @@
       "fileMatch": ["manifest.yml"],
       "matchStrings": ["nodelts: (?<currentValue>20.+)"],
       "depNameTemplate": "nodelts",
-      "datasourceTemplate": "custom.node-version-lts"
+      "datasourceTemplate": "custom.nodelts"
     }
   ],
   "customDatasources": {
-    "node-version-lts": {
+    "nodelts": {
       "defaultRegistryUrlTemplate": "https://nodejs.org/dist/index.json",
       "format": "json",
       "transformTemplates": [
