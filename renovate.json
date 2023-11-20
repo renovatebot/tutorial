@@ -12,7 +12,7 @@
     {
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
-      "matchStrings": ["nodelts: (?<currentValue>.*?)"],
+      "matchStrings": ["nodelts: (?<currentValue>.+?)"],
       "depNameTemplate": "node",
       "datasourceTemplate": "node",
       "versioningTemplate": "node"
@@ -20,6 +20,7 @@
   ],
   "packageRules": [
     {
+      "updateTypes": ["minor", "patch"],
       "matchPackageNames": ["node"]
     }
   ]
