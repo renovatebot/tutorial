@@ -13,7 +13,7 @@
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
       "matchStrings": ["nodelts: (?<currentValue>20.+)"],
-      "depNameTemplate": "nodelts",
+      "depNameTemplate": "custom.nodelts",
       "datasourceTemplate": "custom.nodelts"
     }
   ],
