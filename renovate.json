@@ -56,9 +56,10 @@
     {
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
-      "matchStrings": ["maven: (?<currentValue>.+)"],
+      "matchStrings": ["maven: (?<currentValue>3.+)"],
       "depNameTemplate": "apache/maven",
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "maven"
     },
     {
       "customType": "regex",
@@ -102,8 +103,8 @@
       "matchPackageNames": ["node"]
     },
     {
-      "matchPackageNames": ["apache/maven"],
-      "versioning": "semver"
+      "updateTypes": ["minor", "patch"],
+      "matchPackageNames": ["apache/maven"]
     }
   ]
 }
