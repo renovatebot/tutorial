@@ -102,7 +102,7 @@
       "matchPackageNames": ["node"]
     },
     {
-      "matchPackageNames": ["maven"],
+      "matchPackageNames": ["apache/maven"],
       "versioning": "semver"
     }
   ]
