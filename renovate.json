@@ -37,10 +37,8 @@
       "fileMatch": ["manifest.yml"],
       "matchStrings": ["git-lfs: (?<currentValue>.+)"],
       "depNameTemplate": "git-lfs/git-lfs",
-      "packageName": "git-lfs",
       "datasourceTemplate": "github-releases"
-    },
-
+    }
   ],
   "packageRules": [
     {
