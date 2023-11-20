@@ -58,7 +58,8 @@
       "fileMatch": ["manifest.yml"],
       "matchStrings": ["maven: (?<currentValue>.+)"],
       "depNameTemplate": "apache/maven",
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "semver-coerced"
     },
     {
       "customType": "regex",
