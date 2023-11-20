@@ -5,7 +5,7 @@ gcloud: 448.0.0
 git-lfs: 3.1.1
 gradle: 8.3
 lein: 2.10.0
-maven: 3.9.4
+maven: 3.9.3
 pyenv: 2.3.27
 python2: 2.7.18
 python3: 3.11.5
