@@ -100,7 +100,12 @@
   "packageRules": [
     {
       "updateTypes": ["minor", "patch"],
-      "matchPackageNames": ["node", "maven"]
+      "matchPackageNames": ["node"]
+    },
+    {
+      "updateTypes": ["minor", "patch"],
+      "matchPackageNames": ["maven"],
+      "matchDepNames": ["maven"]
     }
   ]
 }
