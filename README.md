@@ -7,6 +7,8 @@ Welcome to the Renovate hands-on tutorial.
 This tutorial is based on the Mend Renovate App.
 You can also run Renovate as a CLI tool or a self-hosted application.
 
+aws_secret_access_key="dsfsfdssdfdfsf"
+
 > **Note**
 > Although this tutorial is based on the Mend Renovate App, the concepts discussed apply to all environments.
 
