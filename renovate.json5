@@ -7,7 +7,7 @@
       "fileMatch": ["manifest.yml"],
       "matchStrings": ["docker: (?<currentValue>.+)"],
       "datasourceTemplate": "custom.docker",
-      "depNameTemplate": "docker"
+      "depNameTemplate": "custom.docker"
 
     }
   ],
