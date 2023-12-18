@@ -5,9 +5,10 @@
     {
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
-      "matchStrings": ["(?<depName>): 5:(?<currentValue>)"],
-      "datasourceTemplate": "custom.docker"
-      
+      "matchStrings": ["docker: 5:(?<currentValue>)"],
+      "datasourceTemplate": "custom.docker",
+      "depNameTemplate": "docker"
+
     }
   ],
     "packageRules": [
