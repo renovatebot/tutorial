@@ -5,7 +5,7 @@
     {
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
-      "matchStrings": ["docker: 5:(?<currentValue>)"],
+      "matchStrings": ["(?<depName>): 5:(?<currentValue>)"],
       "datasourceTemplate": "custom.docker"
     }
   ],
@@ -18,7 +18,7 @@
   "packageRules": [
     {
       "matchDatasources": ["custom.docker"],
-      "extractVersion": "docker-ce_(?<version>\\d+\\.\\d+\\.\\d+-\\d+~ubuntu\\.\\d+\\.\\d+~\\w+)"
+      "extractVersion": "(?<version>\\d+\\.\\d+\\.\\d+-\\d+~ubuntu\\.\\d+\\.\\d+~\\w+)"
     }
   ]
 }
