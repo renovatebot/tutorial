@@ -5,7 +5,7 @@
     {
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
-      "matchStrings": ["docker: (?<currentValue>.+)"],
+      "matchStrings": ["(<?depName>): (?<currentValue>.+)"],
       "datasourceTemplate": "custom.docker",
       "depNameTemplate": "docker"
 
@@ -13,7 +13,7 @@
   ],
     "packageRules": [
       {
-        "matchPackageNames": ["docker"],
+        "matchDepNames": ["docker"],
         "extractVersion": "docker-ce_(?<version>.+)-1~ubuntu\\.22\\.04~jammy_amd64\\.deb"
       }
     ],
