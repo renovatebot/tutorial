@@ -18,7 +18,7 @@
   "packageRules": [
     {
       "matchDatasources": ["custom.docker"],
-      "extractVersion": "(?<version>\\d+\\.\\d+\\.\\d+-\\d+~ubuntu\\.\\d+\\.\\d+~\\w+)"
+      "extractVersion": "\\d+\\.\\d+\\.\\d+-\\d+~ubuntu\\.\\d+\\.\\d+~\\w+"
     }
   ]
 }
