@@ -13,7 +13,7 @@
   ],
     "packageRules": [
       {
-        "matchDepNames": ["docker"],
+        "matchDepNames": ["custom.docker"],
         "extractVersion": "docker-ce_(?<version>.+)-1~ubuntu\\.22\\.04~jammy_amd64\\.deb"
       }
     ],
