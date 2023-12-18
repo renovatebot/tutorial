@@ -5,7 +5,7 @@
     {
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
-      "matchStrings": ["docker: 5:(?<currentValue>)"],
+      "matchStrings": ["docker: (?<currentValue>.+)"],
       "datasourceTemplate": "custom.docker",
       "depNameTemplate": "docker"
 
@@ -14,12 +14,12 @@
     "packageRules": [
       {
         "matchPackageNames": ["docker"],
-        "extractVersion": "\\d+\\.\\d+\\.\\d+-\\d+~ubuntu\\.\\d+\\.\\d+~\\w+"
+        "extractVersion": "docker-ce_(?<version>.+)-1~ubuntu\\.22\\.04~jammy_amd64\\.deb"
       }
     ],
   "customDatasources": {
     "custom.docker": {
-      "defaultRegistryUrlTemplate": "https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/",
+      "defaultRegistryUrlTemplate": "https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64",
       "format": "html"
     }
   }
