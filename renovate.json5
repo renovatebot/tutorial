@@ -5,22 +5,116 @@
     {
       "customType": "regex",
       "fileMatch": ["manifest.yml"],
-      "matchStrings": ["docker: 5:(?<currentValue>.+)-1~ubuntu.22.04~jammy"],
-      "datasourceTemplate": "custom.docker",
-      "depNameTemplate": "docker"
-
+      "matchStrings": ["go: (?<currentValue>.+)"],
+      "depNameTemplate": "go",
+      "datasourceTemplate": "golang-version"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["nodelts: (?<currentValue>20.+)"],
+      "depNameTemplate": "node",
+      "datasourceTemplate": "node",
+      "versioningTemplate": "node"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["nodeCurrent: (?<currentValue>21.+)"],
+      "depNameTemplate": "node",
+      "datasourceTemplate": "node",
+      "versioningTemplate": "node"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["gcloud: (?<currentValue>.+)"],
+      "depNameTemplate": "twistedpair/google-cloud-sdk",
+      "datasourceTemplate": "github-tags"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["git-lfs: (?<currentValue>.+)"],
+      "depNameTemplate": "git-lfs/git-lfs",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["gradle: (?<currentValue>.+)"],
+      "depNameTemplate": "gradle",
+      "datasourceTemplate": "gradle-version"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["lein: (?<currentValue>.+)"],
+      "depNameTemplate": "technomancy/leiningen",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["maven: (?<currentValue>.*)"],
+      "depNameTemplate": "apache/maven",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["pyenv: (?<currentValue>.+)"],
+      "depNameTemplate": "pyenv/pyenv",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["python3: (?<currentValue>.+)"],
+      "depNameTemplate": "python/cpython",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["ruby: (?<currentValue>.+)"],
+      "depNameTemplate": "ruby",
+      "datasourceTemplate": "ruby-version"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["sbt: (?<currentValue>.+)"],
+      "depNameTemplate": "sbt/sbt",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["yq: (?<currentValue>.+)"],
+      "depNameTemplate": "mikefarah/yq",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["manifest.yml"],
+      "matchStrings": ["maven: (?<currentValue>.*)"],
+      "depNameTemplate": "apache/maven",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^maven-(?<version>.*)$"
     }
   ],
-    "packageRules": [
-      {
-        "matchDepNames": ["docker"],
-        "extractVersion": "docker-ce_(?<version>.+)-1~ubuntu\\.22\\.04~jammy_amd64\\.deb"
-      }
-    ],
-  "customDatasources": {
-    "custom.docker": {
-      "defaultRegistryUrlTemplate": "https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64",
-      "format": "html"
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch"],
+      "matchPackageNames": ["node"]
+    },
+    {
+      "matchPackageNames": [
+        "apache/maven"
+      ],
+      "allowedVersions": "/.*/",
+      "rangeStrategy": ["bump"]
     }
-  }
+  ]
 }
