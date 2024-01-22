@@ -5,7 +5,7 @@
   "author": "Philip",
   "license": "Apache-2.0",
   "dependencies": {
-    "commander": "2.20.3",
+    "commander": "11.1.0",
     "lodash": "4.17.21",
     "@date-io/date-fns": "2.10.0",
     "@date-io/moment": "2.10.0"
