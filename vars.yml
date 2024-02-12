@@ -1,0 +1,92 @@
+---
+data_dir: "/srv/data"
+
+swag_container_name: swag
+swag_image: lscr.io/linuxserver/swag:2.8.0-ls275
+swag_host_port_1: 80
+swag_host_port_2: 443
+swag_env_url: 'therr.de'
+swag_env_email: 'certs@therr.de'
+
+pairdrop_container_name: pairdrop
+pairdrop_image: lscr.io/linuxserver/pairdrop:v1.10.6-ls66
+pairdrop_server_name: drop.therr.de
+pairdrop_container_port: 3000
+pairdrop_proxy_int: true
+pairdrop_proxy_ext: true
+
+loki_container_name: loki
+loki_image: grafana/loki:2.9.4
+loki_server_name: loki.therr.de
+loki_host_port: 3100
+loki_proxy_int: true
+loki_proxy_ext: true
+
+promtail_container_name: promtail
+promtail_image: grafana/promtail:2.9.4
+
+grafana_container_name: grafana
+grafana_image: grafana/grafana:latest
+grafana_server_name: dash.therr.de
+grafana_container_port: 3000
+grafana_proxy_int: true
+grafana_proxy_ext: true
+
+gitlab_container_name: gitlab
+gitlab_image: gitlab/gitlab-ee:16.8.1-ee.0
+gitlab_server_name: git.therr.de
+gitlab_container_port: 3000
+gitlab_proxy_int: true
+gitlab_proxy_ext: true
+
+hedgedoc_container_name: hedgedoc
+hedgedoc_image: quay.io/hedgedoc/hedgedoc:1.9.9
+hedgedoc_server_name: pad.therr.de
+hedgedoc_host_port: 3200
+hedgedoc_proxy_int: true
+hedgedoc_proxy_ext: true
+
+ddclient_container_name: ddclient
+ddclient_image: lscr.io/linuxserver/ddclient:v3.11.2-ls148
+
+uptime_container_name: uptime-kuma
+uptime_image: louislam/uptime-kuma:1.23.11
+uptime_server_name: uptime.therr.de
+uptime_container_port: 3001
+
+homepage_container_name: homepage
+homepage_image: ghcr.io/gethomepage/homepage:v0.8.7
+homepage_server_name: homepage.therr.de
+homepage_container_port: 3000
+
+unifi_container_name: unifi-controller
+unifi_image: jacobalberty/unifi:v8.0.28
+
+dynmap_external_name: 172.16.17.124
+dynmap_server_name: dynmap.therr.de
+dynmap_external_port: 8123
+
+smarthome_external_name: 10.0.40.157
+smarthome_server_name: smarthome.therr.de
+smarthome_external_port: 8123
+
+valetudo_external_name: 10.0.30.168
+valetudo_server_name: dustbuster.therr.de
+valetudo_external_port: 80
+
+pve1_external_name: 172.16.17.36
+pve1_server_name: pve1.therr.de
+pve1_external_port: 8006
+
+pve2_external_name: 172.16.17.37
+pve2_server_name: pve2.therr.de
+pve2_external_port: 8006
+
+pve3_external_name: 172.16.17.38
+pve3_server_name: pve3.therr.de
+pve3_external_port: 8006
+
+pbs_external_name: 172.16.17.150
+pbs_server_name: pbs.therr.de
+pbs_external_port: 8006
+
