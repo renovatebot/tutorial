@@ -31,6 +31,7 @@ module.exports = {
         "(?m)lodash*",
       ],
     },
+  ],
   extends: [":semanticCommits", ":semanticPrefixFixDepsChoreOthers"],
   onboarding: false,
 }
