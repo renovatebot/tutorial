@@ -1,3 +1,5 @@
+.terraform
+
 # Logs
 logs
 *.log
